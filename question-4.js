@@ -8,10 +8,11 @@ const inventory = [
 function lowestStock (inventory) {
   let minStock = inventory[0]
   for (let i = 0; i < inventory.length; i++) {
-    if (inventory[i].quantity < minStock.quantity)
-    minStock = inventory[i]
+    if (inventory[i].quantity < minStock[i].quantity) {
+      minStock = inventory[i];
+    }       
   }
+  return `สินค้าที่มีจำนวนต่ำที่สุดในคลังสินค้าคือ ${minStock.name} ซึ่งมี ${minStock.quantity} ชิ้น`;
 }   
 
-console.log(`สินค้าที่มีจำนวนต่ำที่สุดในคลังสินค้าคือ ${minStock.name} ซึ่งมี ${minStock.quantity} ชิ้น`);
 // สินค้าที่มีจำนวนต่ำที่สุดในคลังสินค้าคือ Banana ซึ่งมี 50 ชิ้น
